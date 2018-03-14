@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Do Not Enter Sign</title>
+    </head>
+    <body>
+        <canvas width="1000" height="1000"></canvas>
+        <script >
+        //Drawing Stop Sign
+        var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.strokeStyle = "red";
+        ctx.fillStyle = "red";
+        // Drawing circle
+        ctx.beginPath();
+        ctx.arc(230,210,200,0,2*Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        //Writing Text
+        ctx.fillStyle  = "white";
+        ctx.font = "bold 50px Arial";
+        ctx.fillText( "DO NOT" ,135, 190);
+        ctx.restore();
+        //Drawing Square
+        ctx.fillStyle =  "white";
+        ctx.fillRect(138, 195, 190, 30);
+        //Writing Text
+        ctx.fillStyle  = "white";
+        ctx.font = "bold 50px Arial";
+        ctx.fillText( "Enter" ,167, 265);
+        ctx.restore();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>One Way Sign</title>
+    </head>
+    <body>
+        <canvas width="1000" height="1000"></canvas>
+        <script >
+        var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d");
+        // Outer Rectangle
+        ctx.strokeStyle = ("#00c8ff", ctx.width/4 ,ctx.height/4);
+        ctx.strokeRect(200, 10, 250, 360);
+        // Inner  Rectangle
+        ctx.strokeStyle = 'white';
+        ctx.fillStyle = '#00c8ff';
+        ctx.fillRect(203, 13, 244, 354);
+        //Drawing Triangle
+        ctx.strokeStyle = "white";
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.moveTo(245,115);
+        ctx.lineTo(320,25);
+        ctx.lineTo(400,115);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+        //Drawing Rectangle
+        ctx.fillStyle = 'white';
+        ctx.fillRect(282.5, 114, 80, 230);
+        //Writing Text
+        ctx.fillStyle  = "#00c8ff";
+                ctx.font = "bold 50px Arial";
+                ctx.fillText( "ONE WAY" ,200, 420);
+                ctx.restore();
+        </script>
+    </body>
+</html>
